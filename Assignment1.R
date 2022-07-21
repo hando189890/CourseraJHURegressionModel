@@ -1,0 +1,22 @@
+plot(jitter(child,4) ~ parent,galton)
+regrline <- lm(child ~ parent, galton)
+abline(regrline, lwd=3, col='red')
+summary(regrline)
+fit <- lm(child ~ parent, galton)
+summary(fit)
+mean(fit$residuals)
+cov(fit$residuals, galton$parent)
+sqe(ols.slope+sl,ols.intercept+ic) == deviance(fit) + sum(est(sl,ic)ˆ2 )
+ols.ic <- fit$coef[1]
+ols.slope <- fit$coef[2]
+lhs-rhs
+all.equal(lhs,rhs)
+varChild <- var(galton$child)
+varRes <- var(fit$residuals)
+varEst <- var(est(ols.slope, ols.ic))
+all.equal(varChild,varEst+varRes)
+efit <- lm(accel ~ mag+dist, attenu)
+cov(efit$residuals, attenu$mag)
+cov(efit$residuals, attenu$dist)
+cor(gpa_nor,gch_nor)
+l_nor <- lm(gch_nor ~ gpa_nor)
